@@ -1,3 +1,4 @@
+// REGISTER INTERFACE
 export interface SignUp {
   firstname: string;
   lastname: string;
@@ -8,6 +9,7 @@ export interface SignUp {
   birthdate: null;
 }
 
+// LOGIN INTERFACE
 export interface LoginUser {
   email: string;
   password: string;

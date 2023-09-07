@@ -29,7 +29,8 @@ const Signup = () => {
   const navigate = useNavigate();
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
 
-  const registerClick = async (values: SignUp) => {
+  // VALIDATION AND DISPATCH CALL
+  const onFinish = async (values: SignUp) => {
     const {
       firstname,
       lastname,
@@ -99,7 +100,7 @@ const Signup = () => {
         {...layout}
         name="nest-messages"
         style={{ maxWidth: 600 }}
-        onFinish={registerClick}
+        onFinish={onFinish}
         initialValues={defaultData}
       >
         <Form.Item

@@ -2,6 +2,7 @@ import bcrypt from "bcrypt";
 import users from "../models/user";
 import { error } from "console";
 
+// REGISTER
 const registerService = async (
   id: number,
   firstname: string,
@@ -32,6 +33,7 @@ const registerService = async (
   }
 };
 
+// LOGIN
 const loginService = async (email: string, password: string) => {
   try {
     const loginUser = await users.findOne({
@@ -57,6 +59,7 @@ const loginService = async (email: string, password: string) => {
   }
 };
 
+// PROFILE
 const userProfileService = async (email: string) => {
   try {
     const userProfile = await users.findOne({
@@ -73,6 +76,7 @@ const userProfileService = async (email: string) => {
   }
 };
 
+// LIST
 const userListService = async () => {
   try {
     const userList = await users.findAll({});

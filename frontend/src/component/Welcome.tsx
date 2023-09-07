@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from React Router for navigation
+import { Link } from "react-router-dom";
 
 const Welcome = () => {
   return (
@@ -11,7 +11,7 @@ const Welcome = () => {
           <Link to="/signup" className="signup-link">
             Sign Up
           </Link>
-        </div>{" "}
+        </div>
         <br /> <br />
         <div className="action-buttons">
           <Link to="/login" className="signup-link">

@@ -12,6 +12,7 @@ const UserList = () => {
     dispatch(userListAction());
   }, [dispatch]);
 
+  // TABLE COLUMNS
   const columns = [
     {
       title: "First Name",

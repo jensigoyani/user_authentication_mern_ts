@@ -1,7 +1,5 @@
 import { Model, DataTypes } from "sequelize";
 import sequelize from "../database/database";
-
-// Define the model and its types
 interface UserAttributes {
   id: number;
   firstname: string;

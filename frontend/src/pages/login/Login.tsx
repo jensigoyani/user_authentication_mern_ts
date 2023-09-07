@@ -19,6 +19,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [loginSuccess, setLoginSuccess] = useState(false);
 
+  // VALIDATION AND DISPATCH CALL
   const onFinish = async (values: LoginUser) => {
     const { email, password } = values;
 

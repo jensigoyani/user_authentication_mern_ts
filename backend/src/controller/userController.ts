@@ -6,6 +6,7 @@ import {
   userProfileService,
 } from "../services/userServices";
 
+// REGISTER USER
 const register = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const {
@@ -43,6 +44,7 @@ const register = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
+// LOGIN USER
 const login = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { email, password } = req.body;
@@ -68,6 +70,7 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
+// USER PROFILE
 const userProfile = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const email = req.query.email as string;
@@ -87,6 +90,7 @@ const userProfile = async (req: Request, res: Response, next: NextFunction) => {
   }
 };
 
+// USER LIST
 const userLists = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const userList = await userListService();

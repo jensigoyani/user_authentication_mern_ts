@@ -11,6 +11,7 @@ import {
   USER_PROFILE_SUCCESS,
 } from "../../constants/actionConstants";
 
+// REGISTER USER ACTIONS
 export const registerUser =
   (userFormData: any) =>
   async (dispatch: (arg0: { type: string; payload: any }) => void) => {
@@ -26,6 +27,7 @@ export const registerUser =
     }
   };
 
+// LOGIN USER ACTIONS
 export const loginUser =
   (userFormData: any) =>
   async (dispatch: (arg0: { type: string; payload: any }) => void) => {
@@ -42,6 +44,7 @@ export const loginUser =
     }
   };
 
+// USER LIST ACTIONS
 export const userListAction =
   () => async (dispatch: (arg0: { type: string; payload: any }) => void) => {
     try {
@@ -57,6 +60,7 @@ export const userListAction =
     }
   };
 
+// USER PROFILE ACTION
 export const userProfileAction =
   (loggedUserEmail: any) =>
   async (dispatch: (arg0: { type: string; payload: any }) => void) => {
