@@ -47,8 +47,6 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { email, password } = req.body;
 
-    console.log("req.body", req.body);
-
     const loginUser = await loginService(email, password);
 
     if ("error" in loginUser) {

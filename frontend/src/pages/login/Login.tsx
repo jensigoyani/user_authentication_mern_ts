@@ -22,8 +22,6 @@ const Login = () => {
   const onFinish = async (values: LoginUser) => {
     const { email, password } = values;
 
-    console.log("values....", values);
-
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       message.error("Please enter a valid Email.");
       return;

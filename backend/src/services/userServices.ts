@@ -42,8 +42,6 @@ const loginService = async (email: string, password: string) => {
       return { error: "User not found" };
     }
 
-    console.log("loginUser", loginUser.dataValues);
-
     const isPasswordValid = await bcrypt.compareSync(
       password,
       loginUser.password
