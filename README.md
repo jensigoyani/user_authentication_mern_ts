@@ -5,5 +5,6 @@
 4. TypeScript<br/>
 
 <h1> Run Command </h1>
-1. Install npm i in frontend & backend folder <br/> 
-2. npm start 
+1. Do npm i in frontend & backend folder <br/> 
+2. Do npm i outside of the both folder 
+3. npm start 
