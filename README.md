@@ -3,6 +3,7 @@
 2. Node js<br/>
 3. MySQL<br/>
 4. TypeScript<br/>
+5. Passport Authnetication
 
 <h1> Run Command </h1>
 1. Do npm i in frontend & backend folder <br/> 
