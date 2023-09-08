@@ -1,12 +1,12 @@
 import { Sequelize } from "sequelize";
-import { config } from "../../config/config";
+import { CONFIG } from "../../config/config";
 
 const sequelize = new Sequelize(
-  config.DATABASE.db_name,
-  config.DATABASE.db_root,
-  config.DATABASE.db_pwd,
+  CONFIG.DATABASE.DB_NAME,
+  CONFIG.DATABASE.DB_ROOT,
+  CONFIG.DATABASE.DB_PWD,
   {
-    host: config.DATABASE.db_host,
+    host: CONFIG.DATABASE.DB_HOST,
     dialect: "mysql",
   }
 );

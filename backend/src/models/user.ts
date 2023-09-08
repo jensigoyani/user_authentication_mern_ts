@@ -1,15 +1,6 @@
 import { Model, DataTypes } from "sequelize";
 import sequelize from "../database/database";
-interface UserAttributes {
-  id: number;
-  firstname: string;
-  lastname: string;
-  username: string;
-  email: string;
-  password: string;
-  gender: "male" | "female" | "other";
-  birthdate: string;
-}
+import { UserAttributes } from "../interface/userInterface";
 
 interface UserInstance extends Model<UserAttributes>, UserAttributes {}
 
