@@ -8,8 +8,12 @@ const UserList = () => {
   const dispatch: any = useDispatch();
   const userList = useSelector((state: any) => state.userReducers);
 
-  useEffect(() => {
+  const userLists = () => {
     dispatch(userListAction());
+  };
+
+  useEffect(() => {
+    userLists();
   }, [dispatch]);
 
   // TABLE COLUMNS

@@ -1,9 +1,9 @@
 import bodyParser from "body-parser";
-import sequelize from "./database/database";
-import userRouter from "./routes/userRoutes";
 import cors from "cors";
-import passport from "./middleware/passportMiddleware";
 import session from "express-session";
+import sequelize from "./database/database";
+import passport from "./middleware/passportMiddleware";
+import userRouter from "./routes/userRoutes";
 import { CONFIG } from "../config/config";
 
 const express = require("express");

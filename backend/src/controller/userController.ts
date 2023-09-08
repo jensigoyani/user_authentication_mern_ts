@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from "express";
+import { Request, Response } from "express";
 import {
   loginService,
   registerService,
@@ -7,7 +7,7 @@ import {
 } from "../services/userServices";
 
 // REGISTER USER
-const register = async (req: Request, res: Response, next: NextFunction) => {
+const register = async (req: Request, res: Response) => {
   try {
     const {
       id,
@@ -36,7 +36,6 @@ const register = async (req: Request, res: Response, next: NextFunction) => {
     });
   } catch (error) {
     console.log(error);
-    next();
     res.status(500).json({
       status: false,
       error,
@@ -45,7 +44,7 @@ const register = async (req: Request, res: Response, next: NextFunction) => {
 };
 
 // LOGIN USER
-const login = async (req: Request, res: Response, next: NextFunction) => {
+const login = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
 
@@ -62,7 +61,6 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
     }
   } catch (error) {
     console.log(error);
-    next();
     res.status(500).json({
       status: false,
       error,
@@ -71,7 +69,7 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
 };
 
 // USER PROFILE
-const userProfile = async (req: Request, res: Response, next: NextFunction) => {
+const userProfile = async (req: Request, res: Response) => {
   try {
     const email = req.query.email as string;
 
@@ -82,7 +80,6 @@ const userProfile = async (req: Request, res: Response, next: NextFunction) => {
     });
   } catch (error) {
     console.log(error);
-    next();
     res.status(500).json({
       status: false,
       error,
@@ -91,7 +88,7 @@ const userProfile = async (req: Request, res: Response, next: NextFunction) => {
 };
 
 // USER LIST
-const userLists = async (req: Request, res: Response, next: NextFunction) => {
+const userLists = async (req: Request, res: Response) => {
   try {
     const userList = await userListService();
 
@@ -100,7 +97,6 @@ const userLists = async (req: Request, res: Response, next: NextFunction) => {
     });
   } catch (error) {
     console.log(error);
-    next();
     res.status(500).json({
       status: false,
       error,

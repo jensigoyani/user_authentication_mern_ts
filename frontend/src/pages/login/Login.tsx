@@ -44,7 +44,7 @@ const Login = () => {
       setLoginSuccess(true);
       message.success("Login succesfully");
 
-      localStorage.setItem("loggedUser_email", email);
+      localStorage.setItem("LOGGEDIN_USER_EMAIL", email);
 
       navigate("/profile");
     } catch (error) {
@@ -61,33 +61,18 @@ const Login = () => {
         initialValues={defaultData}
         onFinish={onFinish}
       >
-        <Form.Item
-          name="email"
-          rules={[{ required: true, message: "Please input your email!" }]}
-        >
+        <Form.Item name="email">
           <Input
             prefix={<UserOutlined className="site-form-item-icon" />}
             placeholder="email"
           />
         </Form.Item>
-        <Form.Item
-          name="password"
-          rules={[{ required: true, message: "Please input your Password!" }]}
-        >
+        <Form.Item name="password">
           <Input
             prefix={<LockOutlined className="site-form-item-icon" />}
             type="password"
             placeholder="Password"
           />
-        </Form.Item>
-        <Form.Item>
-          <Form.Item name="remember" valuePropName="checked" noStyle>
-            <Checkbox>Remember me</Checkbox>
-          </Form.Item>
-
-          <a className="login-form-forgot" href="">
-            Forgot password
-          </a>
         </Form.Item>
 
         <Form.Item>

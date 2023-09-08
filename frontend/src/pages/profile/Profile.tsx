@@ -10,7 +10,7 @@ const Profile = () => {
   const user = userProfile.userProfile;
 
   useEffect(() => {
-    const loggedUserEmail = localStorage.getItem("loggedUser_email");
+    const loggedUserEmail = localStorage.getItem("LOGGEDIN_USER_EMAIL");
 
     if (loggedUserEmail) {
       dispatch(userProfileAction(loggedUserEmail));
@@ -23,12 +23,12 @@ const Profile = () => {
         <h2>Profile</h2>
         {userProfile && (
           <div>
-            <p>firstname: {user.firstname}</p>
-            <p>lastname: {user.lastname}</p>
-            <p>username: {user.username}</p>
-            <p>Email: {user.email}</p>
-            <p>gender: {user.gender}</p>
-            <p>birthdate: {user.birthdate}</p>
+            <p>firstname: {user?.firstname}</p>
+            <p>lastname: {user?.lastname}</p>
+            <p>username: {user?.username}</p>
+            <p>Email: {user?.email}</p>
+            <p>gender: {user?.gender}</p>
+            <p>birthdate: {user?.birthdate}</p>
           </div>
         )}
 

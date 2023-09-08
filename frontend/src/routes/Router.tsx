@@ -10,11 +10,11 @@ const Router = () => {
   return (
     <React.Fragment>
       <Routes>
-        <Route path="/" Component={Welcome} />
-        <Route path="/login" Component={Login} />
-        <Route path="/signup" Component={Signup} />
-        <Route path="/profile" Component={Profile} />
-        <Route path="/list" Component={UserList} />
+        <Route path="/" element={<Welcome />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/list" element={<UserList />} />
       </Routes>
     </React.Fragment>
   );

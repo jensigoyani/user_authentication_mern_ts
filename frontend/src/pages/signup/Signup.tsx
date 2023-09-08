@@ -87,6 +87,7 @@ const Signup = () => {
 
       await dispatch(registerUser(updatedValues));
       setRegistrationSuccess(true);
+      navigate("/profile");
       message.success("Registration successfully done!");
     } catch (error) {
       console.error("Registration error:", error);
@@ -103,53 +104,29 @@ const Signup = () => {
         onFinish={onFinish}
         initialValues={defaultData}
       >
-        <Form.Item
-          name="firstname"
-          label="First Name"
-          rules={[{ required: true }]}
-        >
+        <Form.Item name="firstname" label="First Name">
           <Input />
         </Form.Item>
-        <Form.Item
-          name="lastname"
-          label="Last Name"
-          rules={[{ required: true }]}
-        >
+        <Form.Item name="lastname" label="Last Name">
           <Input />
         </Form.Item>
-        <Form.Item
-          name="username"
-          label="Username"
-          rules={[{ required: true }]}
-        >
+        <Form.Item name="username" label="Username">
           <Input />
         </Form.Item>
-        <Form.Item
-          name="email"
-          label="Email"
-          rules={[{ type: "email", required: true }]}
-        >
+        <Form.Item name="email" label="Email">
           <Input />
         </Form.Item>
-        <Form.Item
-          name="password"
-          label="Password"
-          rules={[{ required: true }]}
-        >
+        <Form.Item name="password" label="Password">
           <Input.Password />
         </Form.Item>
-        <Form.Item name="gender" label="Gender" rules={[{ required: true }]}>
+        <Form.Item name="gender" label="Gender">
           <Select>
             <Option value="male">Male</Option>
             <Option value="female">Female</Option>
             <Option value="other">Other</Option>
           </Select>
         </Form.Item>
-        <Form.Item
-          name="birthdate"
-          label="Birthdate"
-          rules={[{ required: true }]}
-        >
+        <Form.Item name="birthdate" label="Birthdate">
           <DatePicker />
         </Form.Item>
         <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
